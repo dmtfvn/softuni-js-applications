@@ -1,0 +1,27 @@
+import { clearUserData, setUserData } from '../utils.js';
+import { post, get } from './reqs.js';
+
+const endpoints = {
+  register: '/users/register',
+  login: '/users/login',
+  logout: '/users/logout'
+};
+
+// User profile identity can varry
+export async function register(email, password) {
+  const result = await post(endpoints.register, { email, password });
+
+  setUserData(result);
+}
+
+export async function login(email, password) {
+  const result = await post(endpoints.login, { email, password });
+
+  setUserData(result);
+}
+
+export async function logout() {
+  get(endpoints.logout);
+
+  clearUserData();
+}
