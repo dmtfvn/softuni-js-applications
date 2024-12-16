@@ -13,6 +13,9 @@ This repo contains the entire learning material about **JS Applications** @ **So
 
 >*page.js* -:- client-side routing
 
+**Used server:**
+>*RESTful* -:- SoftUni Practice Server
+
 <br>
 
 ## Certificate for successful completion
